@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private float _speed = 5f;
     [SerializeField]
     private float _jumpingSpeed = 10f;
+
+    private int _score = 0; 
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
+        // jumps with space
         if (Input.GetKeyDown("space"))
         {
             RB.velocity += new Vector3(0f, _jumpingSpeed, 0f);
@@ -37,20 +40,25 @@ public class Player : MonoBehaviour
         if (Input.GetKey("up"))
         {
             
-            RB.MovePosition(transform.position + new Vector3(0f,0f,1f) * Time.deltaTime * _speed);
+            RB.MovePosition(transform.position + new Vector3(0f,0f,5f) * Time.deltaTime * _speed);
         }
         if (Input.GetKey("down"))
         {
-            RB.MovePosition(transform.position + new Vector3(0f,0f,-1f) * Time.deltaTime * _speed);
+            RB.MovePosition(transform.position + new Vector3(0f,0f,-5f) * Time.deltaTime * _speed);
         }
         if (Input.GetKey("left"))
         {
-            _animator.SetBool("Run_Left", true);
-            RB.MovePosition(transform.position + new Vector3(-1f,0f,0f) * Time.deltaTime * _speed);
+            RB.MovePosition(transform.position + new Vector3(-5f,0f,0f) * Time.deltaTime * _speed);
         }
         if (Input.GetKey("right"))
         {
-            RB.MovePosition(transform.position + new Vector3(1f,0f,0f) * Time.deltaTime * _speed);
+            RB.MovePosition(transform.position + new Vector3(5f,0f,0f) * Time.deltaTime * _speed);
         }
     }
+
+    public void ScoreUpdate()
+    {
+        _score += 1;
+    }
+    
 }
