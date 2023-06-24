@@ -60,19 +60,19 @@ public class Player_Script : MonoBehaviour
 
         if (transform.position.x <= -380f)
         {
-            transform.position = new Vector3(-377f, 0, transform.position.z);
+            transform.position = new Vector3(-370f, 0, transform.position.z);
         }
         if (transform.position.x >= 380f)
         {
-            transform.position = new Vector3(377f, 0, transform.position.z);
+            transform.position = new Vector3(370f, 0, transform.position.z);
         }
         if (transform.position.z <= 10f)
         {
-            transform.position = new Vector3(transform.position.x, 0, 7f);
+            transform.position = new Vector3(transform.position.x, 0, 20f);
         }
         if (transform.position.z >= 800f)
         {
-            transform.position = new Vector3(transform.position.x, 0, 897f);
+            transform.position = new Vector3(transform.position.x, 0, 890f);
         }
         /*
 if (transform.position.y != 0)
