@@ -22,7 +22,7 @@ public class Player_Script : MonoBehaviour
     void Start()
     {
         // START POSITION 
-        transform.position = new Vector3(0f, 0f, 10f);
+        transform.position = new Vector3(0f, 0f, 20f);
     }
 
     // Update is called once per frame
@@ -56,6 +56,29 @@ public class Player_Script : MonoBehaviour
         {
             RB.MovePosition(transform.position + new Vector3(5f,0f,0f) * Time.deltaTime * _speed);
         }
+
+
+        if (transform.position.x <= -380f)
+        {
+            transform.position = new Vector3(-377f, 0, transform.position.z);
+        }
+        if (transform.position.x >= 380f)
+        {
+            transform.position = new Vector3(377f, 0, transform.position.z);
+        }
+        if (transform.position.z <= 10f)
+        {
+            transform.position = new Vector3(transform.position.x, 0, 7f);
+        }
+        if (transform.position.z >= 800f)
+        {
+            transform.position = new Vector3(transform.position.x, 0, 897f);
+        }
+        /*
+if (transform.position.y != 0)
+{
+    transform.position = new Vector3(transform.position.x, 0,transform.position.z);
+}*/
     }
 
     public void ScoreUpdate()
