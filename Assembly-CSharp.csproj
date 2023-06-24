@@ -41,11 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Run_Right.cs" />
-     <Compile Include="Assets\Scripts\MushroomManager.cs" />
+     <Compile Include="Assets\Scripts\Mushroom_Manager.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
-     <Compile Include="Assets\Scripts\MushroomBehavior.cs" />
+     <Compile Include="Assets\Scripts\Mushroom_Behavior.cs" />
+     <Compile Include="Assets\Scripts\Player_Script.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
