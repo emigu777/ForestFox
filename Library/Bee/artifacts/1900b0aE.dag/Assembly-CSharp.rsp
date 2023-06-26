@@ -350,8 +350,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Run_Right.cs"
-"Assets/Scripts/Player.cs"
+"Assets/Scripts/Mushroom_Behavior.cs"
+"Assets/Scripts/Mushroom_Manager.cs"
+"Assets/Scripts/Player_Script.cs"
+"Assets/Scripts/SpawnManager.cs"
 "Assets/Scripts/Start Button.cs"
 -langversion:9.0
 
