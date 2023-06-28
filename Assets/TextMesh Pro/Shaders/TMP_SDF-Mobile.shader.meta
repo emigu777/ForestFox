@@ -4,6 +4,10 @@ ShaderImporter:
   externalObjects: {}
   defaultTextures: []
   nonModifiableTextures: []
+<<<<<<< HEAD
+  preprocessorOverride: 0
+=======
+>>>>>>> a3bbf6864114c34b01601c4ee6da2af01fd4271d
   userData: 
   assetBundleName: 
   assetBundleVariant: 
