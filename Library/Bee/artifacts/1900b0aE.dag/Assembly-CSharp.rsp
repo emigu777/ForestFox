@@ -354,6 +354,7 @@
 "Assets/Scripts/Mushroom_Manager.cs"
 "Assets/Scripts/Player_Script.cs"
 "Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/UI_Manager.cs"
 -langversion:9.0
 
 /deterministic

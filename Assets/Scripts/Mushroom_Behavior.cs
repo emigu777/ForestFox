@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Mushroom_Behavior : MonoBehaviour
 {
-    [SerializeField] 
     private Player_Script _playerScript;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,8 @@ public class Mushroom_Behavior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _playerScript.ScoreUpdate();
+            _playerScript = other.gameObject.GetComponent<Player_Script>();
+            _playerScript.scoreUpdate();
             Destroy(this.gameObject);
         }
     }

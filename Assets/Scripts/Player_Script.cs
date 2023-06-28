@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Script : MonoBehaviour
@@ -13,10 +14,12 @@ public class Player_Script : MonoBehaviour
 
     [SerializeField] 
     private float _speed = 5f;
-    [SerializeField]
-    private float _jumpingSpeed = 10f;
 
     private int _score = 0; 
+    
+    [SerializeField]
+    private UI_Manager _uiManager;
+
     
     // Start is called before the first frame update
     void Start()
@@ -34,11 +37,6 @@ public class Player_Script : MonoBehaviour
 
     private void Move()
     {
-        // jumps with space
-        if (Input.GetKeyDown("space"))
-        {
-            RB.velocity += new Vector3(0f, _jumpingSpeed, 0f);
-        }
         if (Input.GetKey("up"))
         {
             
@@ -72,17 +70,16 @@ public class Player_Script : MonoBehaviour
         }
         if (transform.position.z >= 800f)
         {
-            transform.position = new Vector3(transform.position.x, 0, 890f);
+            transform.position = new Vector3(transform.position.x, 0, 790f);
         }
-        /*
-if (transform.position.y != 0)
-{
-    transform.position = new Vector3(transform.position.x, 0,transform.position.z);
-}*/
     }
+    
 
-    public void ScoreUpdate()
+    public void scoreUpdate()
     {
         _score += 1;
+        _uiManager.scoreText(_score);
+        Console.Write(_score);
     }
+    
 }
