@@ -9,5 +9,4 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    }
 }
