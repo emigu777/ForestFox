@@ -15,7 +15,9 @@ public class Player_Script : MonoBehaviour
     [SerializeField] 
     private float _speed = 5f;
 
-    private int _score = 0; 
+    private int _score = 0;
+    private int _lives = 3;
+    public bool _alive = true; 
     
     [SerializeField]
     private UI_Manager _uiManager;
@@ -58,19 +60,24 @@ public class Player_Script : MonoBehaviour
 
         if (transform.position.x <= -380f)
         {
-            transform.position = new Vector3(-370f, 0, transform.position.z);
+            transform.position = new Vector3(-375f, 0, transform.position.z);
         }
         if (transform.position.x >= 380f)
         {
-            transform.position = new Vector3(370f, 0, transform.position.z);
+            transform.position = new Vector3(375f, 0, transform.position.z);
         }
         if (transform.position.z <= 10f)
         {
-            transform.position = new Vector3(transform.position.x, 0, 20f);
+            transform.position = new Vector3(transform.position.x, 0, 15f);
         }
         if (transform.position.z >= 800f)
         {
-            transform.position = new Vector3(transform.position.x, 0, 790f);
+            transform.position = new Vector3(transform.position.x, 0, 795f);
+        }
+
+        if (transform.position.y < 0f)
+        {
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
         }
     }
     
@@ -79,7 +86,16 @@ public class Player_Script : MonoBehaviour
     {
         _score += 1;
         _uiManager.scoreText(_score);
-        Console.Write(_score);
+    }
+
+    public void takeDamage()
+    {
+        _lives -= 1;
+        _uiManager.livesText(_lives);
+        if (_lives == 0)
+        {
+            _alive = false;
+        }
     }
     
 }

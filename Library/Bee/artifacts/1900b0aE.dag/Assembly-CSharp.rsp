@@ -353,7 +353,8 @@
 "Assets/Scripts/Mushroom_Behavior.cs"
 "Assets/Scripts/Mushroom_Manager.cs"
 "Assets/Scripts/Player_Script.cs"
-"Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/Spider_Behavior.cs"
+"Assets/Scripts/Spider_Manager.cs"
 "Assets/Scripts/UI_Manager.cs"
 -langversion:9.0
 
